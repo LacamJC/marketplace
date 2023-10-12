@@ -1,0 +1,31 @@
+table
+{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+tr:first-child
+{
+    background-color: rgb(214, 214, 214) ;
+}
+
+tr:first-child td 
+{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+td
+{
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: 1em; 
+}
+
+td:nth-child(4)
+{
+    max-width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

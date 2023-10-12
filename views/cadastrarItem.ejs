@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de itens</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Cadastrando item </legend>
+        <form method="post" action="/cadastrarProduto" autocomplete="off">
+            <div class="campo">
+                <label for="">Nome do produto</label>
+                <span id="linha"></span>
+                 <input type="text" name="nomeProduto" id="nomeProduto" class="caixaTexto" required>
+            </div>
+            
+            
+            <div class="campo">
+                <label for="">Descrição do produto </label>
+                <span id="linha"></span>
+                <!-- <input type="text" name="descricaoProduto" id="descricaoProduto" required> -->
+                <textarea name="descricaoProduto" id="" cols="30" rows="5"></textarea>
+            </div>
+
+            <div class="campo"><label for="">Valor do produto por unidade</label>
+                <span id="linha"></span>
+                <input type="text" name="valorProduto" id="valorProduto" required>
+            </div>
+
+            <div class="campo">
+                <label for="">Estoque do produto </label>
+                <span id="linha"></span>
+                <input type="text" name="estoqueProduto" id="estoqueProduto" required>
+            </div>
+
+            <div class="campo">
+                <label for="">Validade do produto</label>
+                <span id="linha"></span>
+                <input type="text" name="validadeProduto" id="validadeProduto" minlength="10" maxlength="10" required>
+            </div>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </fieldset>
+
+    <script src="js/mascara.js"></script>
+
+</body>
+</html>

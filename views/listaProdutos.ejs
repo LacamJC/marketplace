@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de produtos</title>
+    <link rel="stylesheet" href="css/table.css">
+</head>
+
+<style>
+    h1, p
+    {
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Produtos cadastrados no sistema</h1>
+
+    <p>Total de produtos: <%= listaProdutos.length %></p>
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>NOME</td>
+            <td>ESTOQUE</td>
+            <td>DESCRICAO</td>
+            <td>VALOR </td>
+            <td>VALIDADE </td>
+        </tr>
+        <% listaProdutos.forEach(produto => {%>
+        <tr>
+            <td><%= produto.idProduto %></td>
+            <td><%= produto.nome %></td>
+            <td><%= produto.estoque %></td>
+            <td title="<%=produto.descricao%>"><%= produto.descricao %></td>
+            <td><%= produto.valor %> </td>
+            <td><%= produto.validade %></td>
+        </tr>
+        <%});%>
+    </table>
+</body>
+</html>
